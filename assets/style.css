@@ -21,11 +21,11 @@ body {
 h1 {
     font-family: ka1;
     font-size: 5em;
-    margin-bottom: -10px;
+    margin-bottom: -5px;
 }
 
 .banner {
-    max-width: 800px;
+    max-width: 270px;
     width: 100%;
     height: auto;
 }
@@ -55,5 +55,10 @@ footer{
     h1 {
         font-size: 2em;
     }
+
+    .banner {
+        max-width: 170px;
+        width: 100%;
+        height: auto;
 
 }

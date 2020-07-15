@@ -3,7 +3,9 @@ let messageBienvenueRandom = messagesBienvenue[Math.floor(Math.random() * messag
 
 document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " Are you feeling well today?";
 
-document.getElementById("submit").addEventListener("click", () =>{        
+document.getElementById("submit").addEventListener("click", () =>{ 
+    
+    
     let stringAnswer = document.getElementById("answer").value;
     if ((stringAnswer.toLowerCase().includes("yes")) && (stringAnswer.toLowerCase().includes("no"))) {
         let messageMitigé="Choose yes or no?";
