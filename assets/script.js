@@ -5,22 +5,25 @@ document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " Are 
 
 document.getElementById("submit").addEventListener("click", () => {
     let stringAnswer = document.getElementById("answer").value;
-    
-    if (stringAnswer.search("yes")) {
+    if ((stringAnswer.includes("yes")) && (stringAnswer.includes("no"))) {
+        let messageMitigé="Choose yes or no?";
+        document.getElementById("botoutput").innerHTML = messageMitigé;
+    }
+    else if (stringAnswer.includes("yes")) {
         let messagesGood = ["Cool ta vie", "Content pour toi", "Va dormir"];
         let messageGoodRandom = messagesGood[Math.floor(Math.random() * messagesGood.length)];
-        console.log(messageGoodRandom);
+        document.getElementById("botoutput").innerHTML = messageGoodRandom;
 
-    } else if (stringAnswer.search("no")) {
+    } else if (stringAnswer.includes("no")) {
         let messagesBad = ["Je m'en fous", "Déso pour toi", "Raconte pas ta vie"];
         let messageBadRandom = messagesBad[Math.floor(Math.random() * messagesBad.length)];
-        console.log(messageBadRandom);
+        document.getElementById("botoutput").innerHTML = messageBadRandom;
 
     } else {
         for (let i = 0; i <= 3; i++) {
             let messageIncompréhension = "Pas compris";
-            console.log(messageIncompréhension);
+            document.getElementById("botoutput").innerHTML = messageIncompréhension;
         } let messageAgressif = "Ecris mieux";
-        console.log(messageAgressif);
+        document.getElementById("botoutput").innerHTML = messageAgressif;
     }
 });

@@ -36,8 +36,10 @@ h5{
 
 }
 
-.botbox {
-    
+#botoutput{
+    font-family: poxel;
+    font-size: 0.8em;
+    color: red;
 }
 
 footer{
