@@ -3,27 +3,38 @@ let messageBienvenueRandom = messagesBienvenue[Math.floor(Math.random() * messag
 
 document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " Are you feeling well today?";
 
-document.getElementById("submit").addEventListener("click", () => {
+document.getElementById("submit").addEventListener("click" || "keyCode == = 13", () =>{
+    
+    
     let stringAnswer = document.getElementById("answer").value;
-    if ((stringAnswer.includes("yes")) && (stringAnswer.includes("no"))) {
+    if ((stringAnswer.toLowerCase().includes("yes")) && (stringAnswer.toLowerCase().includes("no"))) {
         let messageMitigé="Choose yes or no?";
         document.getElementById("botoutput").innerHTML = messageMitigé;
     }
-    else if (stringAnswer.includes("yes")) {
-        let messagesGood = ["Cool ta vie", "Content pour toi", "Va dormir"];
+    else if (stringAnswer.toLowerCase().includes("yes")) {
+        let messagesGood = ["Cool story bro", "Urgh... great..", "Noice"];
         let messageGoodRandom = messagesGood[Math.floor(Math.random() * messagesGood.length)];
         document.getElementById("botoutput").innerHTML = messageGoodRandom;
+        setTimeout(function(){
+            let messageFin="Bye";
+            let buttonDisabled=document.getElementById("submit");
+            buttonDisabled.disabled=true;
+            document.getElementById("botoutput").innerHTML = messageFin;
+        },3000);
+        setTimeout(function(){
+            
+        },2000);
 
-    } else if (stringAnswer.includes("no")) {
-        let messagesBad = ["Je m'en fous", "Déso pour toi", "Raconte pas ta vie"];
+    } else if (stringAnswer.toLowerCase().includes("no")) {
+        let messagesBad = ["Not interested", "I don't care, sorry", "Booooooooring"];
         let messageBadRandom = messagesBad[Math.floor(Math.random() * messagesBad.length)];
         document.getElementById("botoutput").innerHTML = messageBadRandom;
 
     } else {
         for (let i = 0; i <= 3; i++) {
-            let messageIncompréhension = "Pas compris";
+            let messageIncompréhension = "I didn't get that..";
             document.getElementById("botoutput").innerHTML = messageIncompréhension;
-        } let messageAgressif = "Ecris mieux";
+        } let messageAgressif = "Did you spell that right?";
         document.getElementById("botoutput").innerHTML = messageAgressif;
     }
 });
