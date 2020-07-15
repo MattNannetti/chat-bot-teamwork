@@ -3,9 +3,7 @@ let messageBienvenueRandom = messagesBienvenue[Math.floor(Math.random() * messag
 
 document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " Are you feeling well today?";
 
-document.getElementById("submit").addEventListener("click", () =>{ 
-    
-    
+document.getElementById("submit").addEventListener("click", () =>{        
     let stringAnswer = document.getElementById("answer").value;
     if ((stringAnswer.toLowerCase().includes("yes")) && (stringAnswer.toLowerCase().includes("no"))) {
         let messageMitigé="Choose yes or no?";
@@ -28,10 +26,20 @@ document.getElementById("submit").addEventListener("click", () =>{
         document.getElementById("botoutput").innerHTML = messageBadRandom;
 
     } else {
-        for (let i = 0; i <= 3; i++) {
+        let i = 0
+
+        if (i<4){
+        i++
             let messageIncompréhension = "I didn't get that..";
             document.getElementById("botoutput").innerHTML = messageIncompréhension;
-        } let messageAgressif = "Did you spell that right?";
+
+        } 
+         else{
+            
+        let messageAgressif = "Did you spell that right?";
         document.getElementById("botoutput").innerHTML = messageAgressif;
+        }
     }
 });
+
+
