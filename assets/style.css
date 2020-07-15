@@ -24,14 +24,34 @@ h1 {
     margin-bottom: -10px;
 }
 
+.banner {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+}
+
 h5{
     font-family: poxel;
     font-size: 1em;
 
 }
 
+.botbox {
+    
+}
+
 footer{
+    margin-top: 40px;
     background-color: black;
     color: white;
     font-family: poxel;
 }
+
+
+@media only screen and (max-width: 600px){
+
+    h1 {
+        font-size: 2em;
+    }
+
+   
