@@ -1,0 +1,37 @@
+
+/* FONTS SELECTOR */
+
+@font-face {
+    font-family: ka1;
+    src: url(../assets/fonts/ka1.ttf);
+}
+
+@font-face {
+    font-family: poxel;
+    src: url(../assets/fonts/poxel-font.ttf);
+}
+
+
+/* MAIN ELEMENTS */
+
+body {
+    text-align: center;
+}
+
+h1 {
+    font-family: ka1;
+    font-size: 5em;
+    margin-bottom: -10px;
+}
+
+h5{
+    font-family: poxel;
+    font-size: 1em;
+
+}
+
+footer{
+    background-color: black;
+    color: white;
+    font-family: poxel;
+}
