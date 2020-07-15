@@ -3,9 +3,7 @@ let messageBienvenueRandom = messagesBienvenue[Math.floor(Math.random() * messag
 
 document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " Are you feeling well today?";
 
-document.getElementById("submit").addEventListener("click" || "keyCode == = 13", () =>{
-    
-    
+document.getElementById("submit").addEventListener("click", () =>{        
     let stringAnswer = document.getElementById("answer").value;
     if ((stringAnswer.toLowerCase().includes("yes")) && (stringAnswer.toLowerCase().includes("no"))) {
         let messageMitigé="Choose yes or no?";
@@ -21,9 +19,6 @@ document.getElementById("submit").addEventListener("click" || "keyCode == = 13",
             buttonDisabled.disabled=true;
             document.getElementById("botoutput").innerHTML = messageFin;
         },3000);
-        setTimeout(function(){
-            
-        },2000);
 
     } else if (stringAnswer.toLowerCase().includes("no")) {
         let messagesBad = ["Not interested", "I don't care, sorry", "Booooooooring"];
