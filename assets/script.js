@@ -1,6 +1,12 @@
 let messagesBienvenue = ["Hello !", "Hi !", "What's up ?"];
 let messageBienvenueRandom = messagesBienvenue[Math.floor(Math.random() * messagesBienvenue.length)];
 
+const gallery = [
+    "assets/images/robot_neutral.png",
+    "assets/images/robot_happy.png",
+    "assets/images/robot_mad.png",
+];
+
 document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " Are you feeling well today?";
 
 document.getElementById("submit").addEventListener("click", () =>{ 
@@ -15,6 +21,8 @@ document.getElementById("submit").addEventListener("click", () =>{
         let messagesGood = ["Cool story bro", "Urgh... great..", "Noice"];
         let messageGoodRandom = messagesGood[Math.floor(Math.random() * messagesGood.length)];
         document.getElementById("botoutput").innerHTML = messageGoodRandom;
+        let image = document.getElementsByTagName("img")[0];        
+        image.setAttribute("src", gallery[1]);
         setTimeout(function(){
             let messageFin="Bye";
             let buttonDisabled=document.getElementById("submit");
@@ -26,8 +34,12 @@ document.getElementById("submit").addEventListener("click", () =>{
         let messagesBad = ["Not interested", "I don't care, sorry", "Booooooooring"];
         let messageBadRandom = messagesBad[Math.floor(Math.random() * messagesBad.length)];
         document.getElementById("botoutput").innerHTML = messageBadRandom;
+        let image = document.getElementsByTagName("img")[0];        
+        image.setAttribute("src", gallery[2]);
 
     } else {
+        let image = document.getElementsByTagName("img")[0];        
+        image.setAttribute("src", gallery[2]);
         for (let i = 0; i <= 3; i++) {
             let messageIncompréhension = "I didn't get that..";
             document.getElementById("botoutput").innerHTML = messageIncompréhension;
