@@ -88,7 +88,7 @@ function answerBot() {
             let image = document.getElementsByTagName("img")[0];
             image.setAttribute("src", gallery[6])
             document.getElementById("botoutput").innerHTML = countdown1;
-        }, 5000);
+        }, 5100);
         setTimeout(function () {
             let image = document.getElementsByTagName("img")[0];
             image.setAttribute("src", gallery[7]);
@@ -106,26 +106,67 @@ function answerBot() {
         }, 8000);
     }
 }
-
+let a=0;
 function batterieVideImage(){
         setTimeout(function () {
             let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[4]);
-        }, 000);
+            image.setAttribute("src", gallery[13]);
+        }, 0000);
         setTimeout(function () {
             let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[7]);
-        }, 250);
+            image.setAttribute("src", gallery[12]);
+        }, 0200);
         setTimeout(function () {
             let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[8]);
-        }, 500);
+            image.setAttribute("src", gallery[11]);
+        }, 0600);
         setTimeout(function () {
             let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[2]);
-        }, 750);
+            image.setAttribute("src", gallery[10]);
+        }, 0800);
         setTimeout(function () {
             let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[6]);
+            image.setAttribute("src", gallery[9]);
         }, 1000);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[13]);
+        }, 1200);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[12]);
+        }, 1400);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[11]);
+        }, 1600);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[10]);
+        }, 1800);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[9]);
+        }, 2000);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[13]);
+        }, 2200);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[12]);
+        }, 2400);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[11]);
+        }, 2600);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[10]);
+        }, 2800);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[9]);
+        }, 3000);
+
 }
