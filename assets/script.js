@@ -1,5 +1,6 @@
 let messagesBienvenue = ["Hello !", "Hi !", "What's up ?"];
 let messageBienvenueRandom = messagesBienvenue[Math.floor(Math.random() * messagesBienvenue.length)];
+let i = 0;
 
 const gallery = [
     "assets/images/robot_neutral.png",
@@ -9,12 +10,22 @@ const gallery = [
 
 document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " Are you feeling well today?";
 
-document.getElementById("submit").addEventListener("click", () =>{ 
-    
-    
+document.getElementById("submit").addEventListener("click", function () {
+    answerBot()
+});
+
+document.getElementById("answer").addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        answerBot()
+    }
+});
+
+function answerBot(){
+document.getElementById("submit").addEventListener("click", () =>{        
     let stringAnswer = document.getElementById("answer").value;
     if ((stringAnswer.toLowerCase().includes("yes")) && (stringAnswer.toLowerCase().includes("no"))) {
-        let messageMitigé="Choose yes or no?";
+        let messageMitigé = "Choose yes or no?";
         document.getElementById("botoutput").innerHTML = messageMitigé;
     }
     else if (stringAnswer.toLowerCase().includes("yes")) {
@@ -28,7 +39,7 @@ document.getElementById("submit").addEventListener("click", () =>{
             let buttonDisabled=document.getElementById("submit");
             buttonDisabled.disabled=true;
             document.getElementById("botoutput").innerHTML = messageFin;
-        },3000);
+        }, 3000);
 
     } else if (stringAnswer.toLowerCase().includes("no")) {
         let messagesBad = ["Not interested", "I don't care, sorry", "Booooooooring"];
@@ -37,13 +48,13 @@ document.getElementById("submit").addEventListener("click", () =>{
         let image = document.getElementsByTagName("img")[0];        
         image.setAttribute("src", gallery[2]);
 
-    } else {
-        let image = document.getElementsByTagName("img")[0];        
-        image.setAttribute("src", gallery[2]);
-        for (let i = 0; i <= 3; i++) {
-            let messageIncompréhension = "I didn't get that..";
-            document.getElementById("botoutput").innerHTML = messageIncompréhension;
-        } let messageAgressif = "Did you spell that right?";
-        document.getElementById("botoutput").innerHTML = messageAgressif;
-    }
+    } else if (i < 3){
+        i++;
+        let messageIncompréhension = "I didn't get that..";
+        document.getElementById("botoutput").innerHTML = messageIncompréhension;
+    } else{
+            let messageAgressif = "Did you spell that right?";
+            document.getElementById("botoutput").innerHTML = messageAgressif;
+        }
 });
+}
