@@ -1,6 +1,6 @@
 let messagesBienvenue = ["Hello !", "Hi !", "What's up ?"];
 let messageBienvenueRandom = messagesBienvenue[Math.floor(Math.random() * messagesBienvenue.length)];
-let i = 0;
+
 
 const gallery = [
     "assets/images/robot_neutral.png",
@@ -32,6 +32,7 @@ document.getElementById("answer").addEventListener("keydown", function () {
 
 
 function answerBot() {
+    let i = 0;
     document.getElementById("submit").addEventListener("click", () => {
                         let stringAnswer = document.getElementById("answer").value;
                 if ((stringAnswer.toLowerCase().includes("yes")) && (stringAnswer.toLowerCase().includes("no"))) {
@@ -44,7 +45,7 @@ function answerBot() {
                     document.getElementById("botoutput").innerHTML = messageGoodRandom;
                         let image = document.getElementsByTagName("img")[0];
                     image.setAttribute("src", gallery[1]);
-                    shutDown();
+                    //shutDown();
                 } 
                 else if (stringAnswer.toLowerCase().includes("no")) {
                         let messagesBad = ["Not interested", "I don't care, sorry", "Booooooooring"];
@@ -52,8 +53,23 @@ function answerBot() {
                     document.getElementById("botoutput").innerHTML = messageBadRandom;
                         let image = document.getElementsByTagName("img")[0];
                     image.setAttribute("src", gallery[2]);
-                    shutDown();
+                   // shutDown();
                 }
+                else if (i < 4) {
+                    i++;
+                        let messageIncompréhension = "I didn't get that..";
+                    document.getElementById("botoutput").innerHTML = messageIncompréhension;
+                        let image = document.getElementsByTagName("img")[0];
+                    image.setAttribute("src", gallery[4]);
+
+                    } 
+                    else {
+                        let messageAgressif = "Did you spell that right?";
+                    document.getElementById("botoutput").innerHTML = messageAgressif;
+                        let image = document.getElementsByTagName("img")[0];
+                    image.setAttribute("src", gallery[3]);
+                    shutDown();
+                    }
     });    
 
     document.getElementById("answer").addEventListener("keydown", ({
@@ -72,7 +88,7 @@ function answerBot() {
                     document.getElementById("botoutput").innerHTML = messageGoodRandom;
                         let image = document.getElementsByTagName("img")[0];
                     image.setAttribute("src", gallery[1]);
-                    shutDown();
+                  //  shutDown();
         
                     } 
                     else if (stringAnswer.toLowerCase().includes("no")) {
@@ -81,7 +97,7 @@ function answerBot() {
                     document.getElementById("botoutput").innerHTML = messageBadRandom;
                         let image = document.getElementsByTagName("img")[0];
                     image.setAttribute("src", gallery[2]);
-                    shutDown();
+                   // shutDown();
 
                     }   
                     else if (i < 4) {
