@@ -34,6 +34,8 @@ document.getElementById("answer").addEventListener("keydown", ({
     }
 });
 
+
+
 function answerBot() {
     let stringAnswer = document.getElementById("answer").value;
     if ((stringAnswer.toLowerCase().includes("yes")) && (stringAnswer.toLowerCase().includes("no"))) {
