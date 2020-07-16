@@ -49,7 +49,7 @@ function answerBot() {
             image.setAttribute("src", gallery[2]);
             shutDown();
 
-        } else if (i < 3) {
+        } else if (i < 4) {
             i++;
             let messageIncompréhension = "I didn't get that..";
             document.getElementById("botoutput").innerHTML = messageIncompréhension;
