@@ -19,7 +19,7 @@ Notre but est d'améliorer notre compréhension de Javascript et de l'appliquer 
 b. *Répartition des tâches.*
 </br>Une partie de l'équipe a été mise en charge de l'HTML/CSS tandis que le reste s'occupait de commencer le README et de réfléchir au code Javascript.
 Voici ici notre première version HTML/CSS :
-![HTML prototype du projet](assets/images/prototype-HTML.png)
+![HTML prototype du projet](assets/images/prototype_HTML.png)
 
 c. *Code.*
 </br>Une fois le HTML fait, on s'est penché ensemble sur le code qu'on a écrit à trois. 
