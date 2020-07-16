@@ -25,54 +25,85 @@ document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " Are 
 document.getElementById("submit").addEventListener("click", function () {
     answerBot()
 });
-
-document.getElementById("answer").addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        answerBot()
-    }
+document.getElementById("answer").addEventListener("keydown", function () {
+    answerBot()
 });
+
+
 
 function answerBot() {
     document.getElementById("submit").addEventListener("click", () => {
-        let stringAnswer = document.getElementById("answer").value;
-        if ((stringAnswer.toLowerCase().includes("yes")) && (stringAnswer.toLowerCase().includes("no"))) {
-            let messageMitigé = "Choose yes or no?";
-            document.getElementById("botoutput").innerHTML = messageMitigé;
-        }
-        else if (stringAnswer.toLowerCase().includes("yes")) {
-            let messagesGood = ["Cool story bro", "Urgh... great..", "Noice"];
-            let messageGoodRandom = messagesGood[Math.floor(Math.random() * messagesGood.length)];
-            document.getElementById("botoutput").innerHTML = messageGoodRandom;
-            let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[1]);
-            shutDown();
+                        let stringAnswer = document.getElementById("answer").value;
+                if ((stringAnswer.toLowerCase().includes("yes")) && (stringAnswer.toLowerCase().includes("no"))) {
+                        let messageMitigé = "Choose yes or no?";
+                    document.getElementById("botoutput").innerHTML = messageMitigé;
+                }
+                else if (stringAnswer.toLowerCase().includes("yes")) {
+                        let messagesGood = ["Cool story bro", "Urgh... great..", "Noice"];
+                        let messageGoodRandom = messagesGood[Math.floor(Math.random() * messagesGood.length)];
+                    document.getElementById("botoutput").innerHTML = messageGoodRandom;
+                        let image = document.getElementsByTagName("img")[0];
+                    image.setAttribute("src", gallery[1]);
+                    shutDown();
+                } 
+                else if (stringAnswer.toLowerCase().includes("no")) {
+                        let messagesBad = ["Not interested", "I don't care, sorry", "Booooooooring"];
+                        let messageBadRandom = messagesBad[Math.floor(Math.random() * messagesBad.length)];
+                    document.getElementById("botoutput").innerHTML = messageBadRandom;
+                        let image = document.getElementsByTagName("img")[0];
+                    image.setAttribute("src", gallery[2]);
+                    shutDown();
+                }
+    });    
 
-        } else if (stringAnswer.toLowerCase().includes("no")) {
-            let messagesBad = ["Not interested", "I don't care, sorry", "Booooooooring"];
-            let messageBadRandom = messagesBad[Math.floor(Math.random() * messagesBad.length)];
-            document.getElementById("botoutput").innerHTML = messageBadRandom;
-            let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[2]);
-            shutDown();
+    document.getElementById("answer").addEventListener("keydown", ({
+                key
+        }) => { //event si enter pressé
+                if (key === "Enter") {
+                    event.preventDefault();
+                        let stringAnswer = document.getElementById("answer").value;
+                    if ((stringAnswer.toLowerCase().includes("yes")) && (stringAnswer.toLowerCase().includes("no"))) {
+                        let messageMitigé = "Choose yes or no?";
+                    document.getElementById("botoutput").innerHTML = messageMitigé;
+                    }
+                    else if (stringAnswer.toLowerCase().includes("yes")) {
+                        let messagesGood = ["Cool story bro", "Urgh... great..", "Noice"];
+                        let messageGoodRandom = messagesGood[Math.floor(Math.random() * messagesGood.length)];
+                    document.getElementById("botoutput").innerHTML = messageGoodRandom;
+                        let image = document.getElementsByTagName("img")[0];
+                    image.setAttribute("src", gallery[1]);
+                    shutDown();
+        
+                    } 
+                    else if (stringAnswer.toLowerCase().includes("no")) {
+                        let messagesBad = ["Not interested", "I don't care, sorry", "Booooooooring"];
+                        let messageBadRandom = messagesBad[Math.floor(Math.random() * messagesBad.length)];
+                    document.getElementById("botoutput").innerHTML = messageBadRandom;
+                        let image = document.getElementsByTagName("img")[0];
+                    image.setAttribute("src", gallery[2]);
+                    shutDown();
 
-        } else if (i < 4) {
-            i++;
-            let messageIncompréhension = "I didn't get that..";
-            document.getElementById("botoutput").innerHTML = messageIncompréhension;
-            let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[4]);
+                    }   
+                    else if (i < 4) {
+                    i++;
+                        let messageIncompréhension = "I didn't get that..";
+                    document.getElementById("botoutput").innerHTML = messageIncompréhension;
+                        let image = document.getElementsByTagName("img")[0];
+                    image.setAttribute("src", gallery[4]);
 
-        } else {
-            let messageAgressif = "Did you spell that right?";
-            document.getElementById("botoutput").innerHTML = messageAgressif;
-            let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[3]);
-            shutDown();
-        }
+                    } 
+                    else {
+                        let messageAgressif = "Did you spell that right?";
+                    document.getElementById("botoutput").innerHTML = messageAgressif;
+                        let image = document.getElementsByTagName("img")[0];
+                    image.setAttribute("src", gallery[3]);
+                    shutDown();
+                    }
+                }
     });
+}
 
-    function shutDown() {
+function shutDown() {
         let alertRobotMessage = "WARNING! Low battery!";
         let countdown1 = "3";
         let countdown2 = "2";
@@ -103,8 +134,8 @@ function answerBot() {
             buttonDisabled.disabled = true;
             document.getElementById("botoutput").innerHTML = messageFin;
         }, 9500);
-    }
 }
+
 let a=0;
 function batterieVideImage(){
         setTimeout(function () {
