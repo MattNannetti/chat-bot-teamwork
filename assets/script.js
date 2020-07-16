@@ -2,6 +2,12 @@ let messagesBienvenue = ["Hello !", "Hi !", "What's up ?"];
 let messageBienvenueRandom = messagesBienvenue[Math.floor(Math.random() * messagesBienvenue.length)];
 let i = 0;
 
+const gallery = [
+    "assets/images/robot_neutral.png",
+    "assets/images/robot_happy.png",
+    "assets/images/robot_mad.png",
+];
+
 document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " Are you feeling well today?";
 
 document.getElementById("submit").addEventListener("click", function () {
@@ -20,12 +26,13 @@ function answerBot() {
         if ((stringAnswer.toLowerCase().includes("yes")) && (stringAnswer.toLowerCase().includes("no"))) {
             let messageMitigé = "Choose yes or no?";
             document.getElementById("botoutput").innerHTML = messageMitigé;
+            shutDown();
 
         } else if (stringAnswer.toLowerCase().includes("yes")) {
             let messagesGood = ["Cool story bro", "Urgh... great..", "Noice"];
             let messageGoodRandom = messagesGood[Math.floor(Math.random() * messagesGood.length)];
             document.getElementById("botoutput").innerHTML = messageGoodRandom;
-            alertRobot();
+            shutDown();
 
         } else if (stringAnswer.toLowerCase().includes("no")) {
             let messagesBad = ["Not interested", "I don't care, sorry", "Booooooooring"];
