@@ -93,17 +93,17 @@ function answerBot() {
             let image = document.getElementsByTagName("img")[0];
             image.setAttribute("src", gallery[7]);
             document.getElementById("botoutput").innerHTML = countdown2;
-        }, 6000);
+        }, 6500);
         setTimeout(function () { let image = document.getElementsByTagName("img")[0];
             image.setAttribute("src", gallery[8]);
             document.getElementById("botoutput").innerHTML = countdown3;
-        }, 7000);
+        }, 8000);
         setTimeout(function () {
             let image = document.getElementsByTagName("img")[0];
             image.setAttribute("src", gallery[5]);
             buttonDisabled.disabled = true;
             document.getElementById("botoutput").innerHTML = messageFin;
-        }, 8000);
+        }, 9500);
     }
 }
 let a=0;
