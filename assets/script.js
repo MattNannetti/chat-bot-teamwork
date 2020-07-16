@@ -120,7 +120,7 @@ function shutDown() {
             let image = document.getElementsByTagName("img")[0];
             image.setAttribute("src", gallery[6])
             document.getElementById("botoutput").innerHTML = countdown1;
-            let myAudio = new Audio("assets/sounds/robot_blip.mp3");
+            let myAudio2 = new Audio("assets/sounds/robot_blip.mp3");
             myAudio2.play();
         }, 5100);
         setTimeout(function () {
