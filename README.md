@@ -8,8 +8,8 @@ Team challenge: **3**
  </br>Noémie, Kévin, Matt.
 
 **2.Choix du projet.**
-</br>Nous vous présentons notre chatbot : "". 
-Nous avons choisi de développer un chatbot car l'interaction entre l'utilisateur et le code nous semblait intéressant à comprendre. 
+</br>Nous vous présentons notre chatbot : "The Meanest Bot". 
+</br>Nous avons choisi de développer un chatbot car l'interaction entre l'utilisateur et le code nous semblait intéressant à comprendre. 
 Notre but est d'améliorer notre compréhension de Javascript et de l'appliquer à une situation concrète.
 
 **3.Projet.**
@@ -19,7 +19,7 @@ Notre but est d'améliorer notre compréhension de Javascript et de l'appliquer 
 b. *Répartition des tâches.*
 </br>Une partie de l'équipe a été mise en charge de l'HTML/CSS tandis que le reste s'occupait de commencer le README et de réfléchir au code Javascript.
 Voici ici notre première version HTML/CSS :
-![HTML prototype du projet](assets/images/prototype_HTML.png)
+</br> ![HTML prototype du projet](assets/images/prototype_HTML.png)
 
 c. *Code.*
 </br>Une fois le HTML fait, on s'est penché ensemble sur le code qu'on a écrit à trois. 
