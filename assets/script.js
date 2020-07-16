@@ -1,7 +1,10 @@
+//Variables
 let messagesBienvenue = ["Hello !", "Hi !", "What's up ?"];
 let messageBienvenueRandom = messagesBienvenue[Math.floor(Math.random() * messagesBienvenue.length)];
 let i = 0;
+let a = 0;
 
+//Images
 const gallery = [
     "assets/images/robot_neutral.png",
     "assets/images/robot_happy.png",
@@ -17,14 +20,12 @@ const gallery = [
     "assets/images/robot_power1.png",
     "assets/images/robot_power2.png",
     "assets/images/robot_power3.png",
-
 ];
-
+//Message bienvenue random
 document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " Are you feeling well today?";
 
-document.getElementById("submit").addEventListener("click", function () {
-    answerBot();
-});
+//Appel fonction principale au clic et Enter
+document.getElementById("submit").addEventListener("click", answerBot);
 document.getElementById("answer").addEventListener("keydown", ({
     key
 }) => {
@@ -34,8 +35,7 @@ document.getElementById("answer").addEventListener("keydown", ({
     }
 });
 
-
-
+//Fonction principale : réponses du robot en fonction de l'utilisateur
 function answerBot() {
     let stringAnswer = document.getElementById("answer").value;
     if ((stringAnswer.toLowerCase().includes("yes")) && (stringAnswer.toLowerCase().includes("no"))) {
@@ -74,6 +74,7 @@ function answerBot() {
     }
 }
 
+//Fonction extinction robot : messages, images, sons
 function shutDown() {
     let alertRobotMessage = "WARNING! Low battery!";
     let countdown1 = "3";
@@ -81,105 +82,122 @@ function shutDown() {
     let countdown3 = "1";
     let messageFin = "Bye";
     let buttonDisabled = document.getElementById("submit");
+
     setTimeout(function () {
-        let myAudio1=new Audio("assets/sounds/robot_battery.mp3");
-        myAudio1.play();
         batterieVideImage();
         document.getElementById("botoutput").innerHTML = alertRobotMessage;
-        
+        let myAudio1 = new Audio("assets/sounds/robot_battery.mp3");
+        myAudio1.play();
     }, 2000);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[6])
         document.getElementById("botoutput").innerHTML = countdown1;
-        let myAudio2=new Audio("assets/sounds/robot_blip.mp3");
+        let myAudio2 = new Audio("assets/sounds/robot_blip.mp3");
         myAudio2.play();
     }, 5100);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[7]);
         document.getElementById("botoutput").innerHTML = countdown2;
-        let myAudio2=new Audio("assets/sounds/robot_blip.mp3");
+        let myAudio2 = new Audio("assets/sounds/robot_blip.mp3");
         myAudio2.play();
     }, 6500);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[8]);
         document.getElementById("botoutput").innerHTML = countdown3;
-        let myAudio2=new Audio("assets/sounds/robot_blip.mp3");
+        let myAudio2 = new Audio("assets/sounds/robot_blip.mp3");
         myAudio2.play();
     }, 8000);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[5]);
         buttonDisabled.disabled = true;
         document.getElementById("botoutput").innerHTML = messageFin;
-        let myAudio3=new Audio("assets/sounds/dying_robot.mp3");
+        let myAudio3 = new Audio("assets/sounds/dying_robot.mp3");
         myAudio3.play();
     }, 9500);
 }
 
-let a = 0;
+//Animation batterie vide
 function batterieVideImage() {
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[13]);
     }, 0000);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[12]);
     }, 0200);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[11]);
     }, 0600);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[10]);
     }, 0800);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[9]);
     }, 1000);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[13]);
     }, 1200);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[12]);
     }, 1400);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[11]);
     }, 1600);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[10]);
     }, 1800);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[9]);
     }, 2000);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[13]);
     }, 2200);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[12]);
     }, 2400);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[11]);
     }, 2600);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[10]);
     }, 2800);
+
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[9]);
     }, 3000);
-
 }
