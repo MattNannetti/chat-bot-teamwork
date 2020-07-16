@@ -74,7 +74,7 @@ function answerBot() {
     });
 
     function shutDown() {
-        let alertRobotMessage = "attention batterie faible";
+        let alertRobotMessage = "WARNING! Low battery!";
         let countdown1 = "3";
         let countdown2 = "2";
         let countdown3 = "1";
