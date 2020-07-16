@@ -6,6 +6,10 @@ const gallery = [
     "assets/images/robot_neutral.png",
     "assets/images/robot_happy.png",
     "assets/images/robot_mad.png",
+    "assets/images/robot_meh.png",
+    "assets/images/robot_question.png",
+    "assets/images/robot_dead.png",
+
 ];
 
 document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " Are you feeling well today?";
