@@ -9,6 +9,9 @@ const gallery = [
     "assets/images/robot_meh.png",
     "assets/images/robot_question.png",
     "assets/images/robot_dead.png",
+    "assets/images/robot_3.png",
+    "assets/images/robot_2.png",
+    "assets/images/robot_1.png",
 
 ];
 
