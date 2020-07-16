@@ -12,6 +12,11 @@ const gallery = [
     "assets/images/robot_3.png",
     "assets/images/robot_2.png",
     "assets/images/robot_1.png",
+    "assets/images/robot_power.png",
+    "assets/images/robot_power0.png",
+    "assets/images/robot_power1.png",
+    "assets/images/robot_power2.png",
+    "assets/images/robot_power3.png",
 
 ];
 
