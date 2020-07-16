@@ -39,7 +39,6 @@ function answerBot() {
         if ((stringAnswer.toLowerCase().includes("yes")) && (stringAnswer.toLowerCase().includes("no"))) {
             let messageMitigé = "Choose yes or no?";
             document.getElementById("botoutput").innerHTML = messageMitigé;
-            shutDown();
         }
         else if (stringAnswer.toLowerCase().includes("yes")) {
             let messagesGood = ["Cool story bro", "Urgh... great..", "Noice"];
