@@ -82,29 +82,40 @@ function shutDown() {
     let messageFin = "Bye";
     let buttonDisabled = document.getElementById("submit");
     setTimeout(function () {
+        let myAudio1=new Audio("assets/sounds/robot_battery.mp3");
+        myAudio1.play();
         batterieVideImage();
         document.getElementById("botoutput").innerHTML = alertRobotMessage;
+        
     }, 2000);
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[6])
         document.getElementById("botoutput").innerHTML = countdown1;
+        let myAudio2=new Audio("assets/sounds/robot_blip.mp3");
+        myAudio2.play();
     }, 5100);
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[7]);
         document.getElementById("botoutput").innerHTML = countdown2;
+        let myAudio2=new Audio("assets/sounds/robot_blip.mp3");
+        myAudio2.play();
     }, 6500);
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[8]);
         document.getElementById("botoutput").innerHTML = countdown3;
+        let myAudio2=new Audio("assets/sounds/robot_blip.mp3");
+        myAudio2.play();
     }, 8000);
     setTimeout(function () {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[5]);
         buttonDisabled.disabled = true;
         document.getElementById("botoutput").innerHTML = messageFin;
+        let myAudio3=new Audio("assets/sounds/dying_robot.mp3");
+        myAudio3.play();
     }, 9500);
 }
 
