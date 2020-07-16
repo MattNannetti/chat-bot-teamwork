@@ -53,11 +53,14 @@ function answerBot() {
             i++;
             let messageIncompréhension = "I didn't get that..";
             document.getElementById("botoutput").innerHTML = messageIncompréhension;
-            shutDown();
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[4]);
 
         } else {
             let messageAgressif = "Did you spell that right?";
             document.getElementById("botoutput").innerHTML = messageAgressif;
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[3]);
             shutDown();
         }
     });
@@ -70,18 +73,27 @@ function answerBot() {
         let messageFin = "Bye";
         let buttonDisabled = document.getElementById("submit");
         setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[5]);
             document.getElementById("botoutput").innerHTML = alertRobotMessage;
         }, 2000);
         setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[3])
             document.getElementById("botoutput").innerHTML = countdown1;
         }, 4000);
         setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[5]);
             document.getElementById("botoutput").innerHTML = countdown2;
         }, 5000);
-        setTimeout(function () {
+        setTimeout(function () { let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[3]);
             document.getElementById("botoutput").innerHTML = countdown3;
         }, 6000);
         setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[5]);
             buttonDisabled.disabled = true;
             document.getElementById("botoutput").innerHTML = messageFin;
         }, 7000);
