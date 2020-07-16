@@ -57,7 +57,7 @@ function answerBot() {
             image.setAttribute("src", gallery[2]);
             shutDown();
 
-        } else if (i < 3) {
+        } else if (i < 4) {
             i++;
             let messageIncompréhension = "I didn't get that..";
             document.getElementById("botoutput").innerHTML = messageIncompréhension;
@@ -82,21 +82,21 @@ function answerBot() {
         let buttonDisabled = document.getElementById("submit");
         setTimeout(function () {
             let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[5]);
+            image.setAttribute("src", gallery[4]);
             document.getElementById("botoutput").innerHTML = alertRobotMessage;
         }, 2000);
         setTimeout(function () {
             let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[3])
+            image.setAttribute("src", gallery[6])
             document.getElementById("botoutput").innerHTML = countdown1;
         }, 4000);
         setTimeout(function () {
             let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[5]);
+            image.setAttribute("src", gallery[7]);
             document.getElementById("botoutput").innerHTML = countdown2;
         }, 5000);
         setTimeout(function () { let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[3]);
+            image.setAttribute("src", gallery[8]);
             document.getElementById("botoutput").innerHTML = countdown3;
         }, 6000);
         setTimeout(function () {
