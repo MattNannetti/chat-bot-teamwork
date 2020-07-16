@@ -76,29 +76,51 @@ function answerBot() {
         let messageFin = "Bye";
         let buttonDisabled = document.getElementById("submit");
         setTimeout(function () {
-            let image = document.getElementsByTagName("img")[0];
-            image.setAttribute("src", gallery[4]);
+            batterieVideImage();
             document.getElementById("botoutput").innerHTML = alertRobotMessage;
         }, 2000);
         setTimeout(function () {
             let image = document.getElementsByTagName("img")[0];
             image.setAttribute("src", gallery[6])
             document.getElementById("botoutput").innerHTML = countdown1;
-        }, 4000);
+        }, 5000);
         setTimeout(function () {
             let image = document.getElementsByTagName("img")[0];
             image.setAttribute("src", gallery[7]);
             document.getElementById("botoutput").innerHTML = countdown2;
-        }, 5000);
+        }, 6000);
         setTimeout(function () { let image = document.getElementsByTagName("img")[0];
             image.setAttribute("src", gallery[8]);
             document.getElementById("botoutput").innerHTML = countdown3;
-        }, 6000);
+        }, 7000);
         setTimeout(function () {
             let image = document.getElementsByTagName("img")[0];
             image.setAttribute("src", gallery[5]);
             buttonDisabled.disabled = true;
             document.getElementById("botoutput").innerHTML = messageFin;
-        }, 7000);
+        }, 8000);
     }
+}
+
+function batterieVideImage(){
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[4]);
+        }, 000);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[7]);
+        }, 250);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[8]);
+        }, 500);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[2]);
+        }, 750);
+        setTimeout(function () {
+            let image = document.getElementsByTagName("img")[0];
+            image.setAttribute("src", gallery[6]);
+        }, 1000);
 }
