@@ -1,4 +1,4 @@
-document.getElementById("botoutput").innerHTML = "Hello";
-let msg = new SpeechSynthesisUtterance();
-msg.text = "Hello";
-window.speechSynthesis.speak(msg);
+
+
+
+speechSynthesis.speak(new SpeechSynthesisUtterance("Hello, i am the meanest bot. do not expect me to be nice. I hate you already."));
