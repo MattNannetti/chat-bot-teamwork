@@ -21,8 +21,19 @@ const gallery = [
     "assets/images/robot_power2.png",
     "assets/images/robot_power3.png",
 ];
+
+
+// TEXT TO SPEECH function
+
+function robottalk (speech){
+    speechSynthesis.speak(new SpeechSynthesisUtterance(speech));
+}
+
+
 //Message bienvenue random
 document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " Are you feeling well today?";
+robottalk(messageBienvenueRandom);
+
 
 //Appel fonction principale au clic et Enter
 document.getElementById("submit").addEventListener("click", answerBot);
@@ -46,35 +57,35 @@ function answerBot() {
         let messagesGood = ["Cool story bro", "Urgh... great..", "Noice"];
         let messageGoodRandom = messagesGood[Math.floor(Math.random() * messagesGood.length)];
         document.getElementById("botoutput").innerHTML = messageGoodRandom;
-        speechSynthesis.speak(new SpeechSynthesisUtterance(messageGoodRandom));
+        robottalk(messageGoodRandom);
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[1]);
-        shutDown();
+        //shutDown();
 
     } else if (stringAnswer.toLowerCase().includes("no")) {
         let messagesBad = ["Not interested", "I don't care, sorry", "Booooooooring"];
         let messageBadRandom = messagesBad[Math.floor(Math.random() * messagesBad.length)];
-        speechSynthesis.speak(new SpeechSynthesisUtterance(messageBadRandom));
+        robottalk(messageBadRandom);
         document.getElementById("botoutput").innerHTML = messageBadRandom;
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[2]);
-        shutDown();
+        //shutDown();
 
     } else if (i < 3) {
         i++;
         let messageIncompréhension = "I didn't get that..";
         document.getElementById("botoutput").innerHTML = messageIncompréhension;
-        speechSynthesis.speak(new SpeechSynthesisUtterance(messageIncompréhension));
+        robottalk(messageIncompréhension);
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[4]);
 
     } else {
         let messageAgressif = "Did you spell that right?";
         document.getElementById("botoutput").innerHTML = messageAgressif;
-        speechSynthesis.speak(new SpeechSynthesisUtterance(messageAgressif));
+        robottalk(messageAgressif);
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[3]);
-        shutDown();
+        //shutDown();
     }
 }
 
