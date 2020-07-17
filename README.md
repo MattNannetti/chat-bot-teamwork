@@ -34,3 +34,5 @@ d. *Animation et son.*
 **5.Chatbot fini.**
 </br>Voici le visuel de la version finale de notre chatbot ! :
 </br> !["The Meanest bot" visuel](assets/images/capturebotvisuelfini.png)
+
+![robot](https://media.giphy.com/media/urvsFBDfR6N32/giphy.gif)
