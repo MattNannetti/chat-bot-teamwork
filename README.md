@@ -8,7 +8,7 @@ Team challenge: **3**
  </br>Noémie, Kévin, Matt.
 
 **2.Choix du projet.**
-</br>Nous vous présentons notre chatbot : "The Meanest Bot". 
+</br>Nous vous présentons notre chatbot : ["The Meanest Bot"](https://mattnannetti.github.io/chat-bot-teamwork/). 
 </br>Nous avons choisi de développer un chatbot car l'interaction entre l'utilisateur et le code nous semblait intéressant à comprendre. 
 Notre but est d'améliorer notre compréhension de Javascript et de l'appliquer à une situation concrète.
 
