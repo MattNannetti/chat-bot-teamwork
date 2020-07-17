@@ -102,6 +102,7 @@ function shutDown() {
     let countdown3 = "1";
     let messageFin = "Bye";
     let buttonDisabled = document.getElementById("submit");
+    let answerAreaDisabled=document.getElementById("answer")
 
     setTimeout(function () {
         batterieVideImage();
@@ -138,6 +139,8 @@ function shutDown() {
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[5]);
         buttonDisabled.disabled = true;
+        answerAreaDisabled.disabled= true;
+        answerAreaDisabled.value = "I'm sleeping now go away"
         document.getElementById("botoutput").innerHTML = messageFin;
         let myAudio3 = new Audio("assets/sounds/dying_robot.mp3");
         myAudio3.play();
