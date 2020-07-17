@@ -26,6 +26,17 @@ const gallery = [
 document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " You're doing ok?";
 robottalk(messageBienvenueRandom + "You're doing ok?");
 
+//Appel fonction principale au clic et Enter
+document.getElementById("submit").addEventListener("click", answerBot);
+document.getElementById("answer").addEventListener("keydown", ({
+    key
+}) => {
+    if (key === "Enter") {
+        event.preventDefault();
+        answerBot();
+    }
+});
+
 // TEXT TO SPEECH function
 function robottalk (speech){
 var msg = new SpeechSynthesisUtterance();
@@ -39,17 +50,6 @@ msg.text = speech;
 msg.lang = 'en-US';
 speechSynthesis.speak(msg);
 }
-
-//Appel fonction principale au clic et Enter
-document.getElementById("submit").addEventListener("click", answerBot);
-document.getElementById("answer").addEventListener("keydown", ({
-    key
-}) => {
-    if (key === "Enter") {
-        event.preventDefault();
-        answerBot();
-    }
-});
 
 //Fonction principale : réponses du robot en fonction de l'utilisateur
 function answerBot() {
