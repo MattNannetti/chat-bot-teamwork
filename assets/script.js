@@ -70,7 +70,7 @@ function answerBot() {
         robottalk(messageGoodRandom);
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[1]);
-        shutDown();
+        //shutDown();
 
     } else if (stringAnswer.toLowerCase().includes("no")) {
         let messagesBad = ["Not interested", "I don't really care", "Boring"];
@@ -79,7 +79,7 @@ function answerBot() {
         document.getElementById("botoutput").innerHTML = messageBadRandom;
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[2]);
-        shutDown();
+        //shutDown();
 
     } else if (i < 3) {
         i++;
