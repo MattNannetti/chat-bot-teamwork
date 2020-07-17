@@ -41,7 +41,7 @@ document.getElementById("answer").addEventListener("keydown", ({
 function robottalk (speech){
 var msg = new SpeechSynthesisUtterance();
 var voices = window.speechSynthesis.getVoices();
-msg.voice = voices[2]; 
+msg.voice = voices[6]; 
 msg.voiceURI = 'native';
 msg.volume = 1; 
 msg.rate = 1; 
@@ -65,7 +65,7 @@ function answerBot() {
         robottalk(messageGoodRandom);
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[1]);
-        //shutDown();
+        shutDown();
 
     } else if (stringAnswer.toLowerCase().includes("no")) {
         let messagesBad = ["Not interested", "I don't really care", "Boring"];
@@ -74,7 +74,7 @@ function answerBot() {
         document.getElementById("botoutput").innerHTML = messageBadRandom;
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[2]);
-        //shutDown();
+        shutDown();
 
     } else if (i < 3) {
         i++;
@@ -90,7 +90,7 @@ function answerBot() {
         robottalk(messageAgressif);
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[3]);
-        //shutDown();
+        shutDown();
     }
 }
 

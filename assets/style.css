@@ -33,7 +33,7 @@ h1 {
     height: auto;
 }
 
-h5{
+h2{
     font-family: poxel;
     font-size: 1em;
 
@@ -69,5 +69,5 @@ footer{
         max-width: 170px;
         width: 100%;
         height: auto;
-
+    }
 }
