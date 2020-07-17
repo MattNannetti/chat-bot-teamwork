@@ -140,6 +140,7 @@ function shutDown() {
         image.setAttribute("src", gallery[5]);
         buttonDisabled.disabled = true;
         answerAreaDisabled.disabled= true;
+        answerAreaDisabled.value="Too late"
         document.getElementById("botoutput").innerHTML = messageFin;
         let myAudio3 = new Audio("assets/sounds/dying_robot.mp3");
         myAudio3.play();
