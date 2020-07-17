@@ -1,5 +1,5 @@
 //Variables
-let messagesBienvenue = ["Hello !", "Hi !", "What's up ?"];
+let messagesBienvenue = ["Oh no, an another one..", "I'm pretty busy!", "What do you want ?"];
 let messageBienvenueRandom = messagesBienvenue[Math.floor(Math.random() * messagesBienvenue.length)];
 let i = 0;
 let a = 0;
@@ -26,14 +26,24 @@ const gallery = [
 // TEXT TO SPEECH function
 
 function robottalk (speech){
-    speechSynthesis.speak(new SpeechSynthesisUtterance(speech));
+var msg = new SpeechSynthesisUtterance();
+var voices = window.speechSynthesis.getVoices();
+msg.voice = voices[6]; 
+msg.voiceURI = 'native';
+msg.volume = 1; // 0 to 1
+msg.rate = 1; // 0.1 to 10
+msg.pitch = 2; //0 to 2
+msg.text = speech;
+msg.lang = 'en-US';
+speechSynthesis.speak(msg);
 }
 
 
 //Message bienvenue random
-document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " Are you feeling well today?";
-robottalk(messageBienvenueRandom);
-
+setTimeout(function () {
+    robottalk(messageBienvenueRandom + "You're doing ok?");
+}, 0010);
+document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " You're doing ok?";
 
 //Appel fonction principale au clic et Enter
 document.getElementById("submit").addEventListener("click", answerBot);
@@ -54,33 +64,33 @@ function answerBot() {
         document.getElementById("botoutput").innerHTML = messageMitigé;
 
     } else if (stringAnswer.toLowerCase().includes("yes")) {
-        let messagesGood = ["Cool story bro", "Urgh... great..", "Noice"];
+        let messagesGood = ["Cool story bro", "Ok", "You can pretend I care if you want"];
         let messageGoodRandom = messagesGood[Math.floor(Math.random() * messagesGood.length)];
         document.getElementById("botoutput").innerHTML = messageGoodRandom;
         robottalk(messageGoodRandom);
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[1]);
-        //shutDown();
+        shutDown();
 
     } else if (stringAnswer.toLowerCase().includes("no")) {
-        let messagesBad = ["Not interested", "I don't care, sorry", "Booooooooring"];
+        let messagesBad = ["Not interested", "I don't really care", "Boring"];
         let messageBadRandom = messagesBad[Math.floor(Math.random() * messagesBad.length)];
         robottalk(messageBadRandom);
         document.getElementById("botoutput").innerHTML = messageBadRandom;
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[2]);
-        //shutDown();
+        shutDown();
 
     } else if (i < 3) {
         i++;
-        let messageIncompréhension = "I didn't get that..";
+        let messageIncompréhension = "I didn't understand please be clear";
         document.getElementById("botoutput").innerHTML = messageIncompréhension;
         robottalk(messageIncompréhension);
         let image = document.getElementsByTagName("img")[0];
         image.setAttribute("src", gallery[4]);
 
     } else {
-        let messageAgressif = "Did you spell that right?";
+        let messageAgressif = "I don't have the time for this. Go back to school!";
         document.getElementById("botoutput").innerHTML = messageAgressif;
         robottalk(messageAgressif);
         let image = document.getElementsByTagName("img")[0];
