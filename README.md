@@ -30,3 +30,7 @@ d. *Animation et son.*
 **4.Problèmes rencontrés.**
 - Boucle au clic.
 - Fonction clic avec Enter.
+
+**5.Chatbot fini.**
+</br>Voici le visuel de la version finale de notre chatbot ! :
+</br> !["The Meanest bot" visuel](assets/images/capturebotvisuelfini.png)
