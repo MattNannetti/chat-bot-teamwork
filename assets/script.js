@@ -59,7 +59,7 @@ function answerBot() {
         document.getElementById("botoutput").innerHTML = messageMitigé;
 
     } else if (stringAnswer.toLowerCase().includes("yes")) {
-        let messagesGood = ["Cool story bro", "Ok", "You can pretend I care if you want"];
+        let messagesGood = ["Cool story bro", "Ok", "Cool"];
         let messageGoodRandom = messagesGood[Math.floor(Math.random() * messagesGood.length)];
         document.getElementById("botoutput").innerHTML = messageGoodRandom;
         robottalk(messageGoodRandom);
