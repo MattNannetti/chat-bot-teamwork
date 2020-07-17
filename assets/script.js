@@ -22,28 +22,23 @@ const gallery = [
     "assets/images/robot_power3.png",
 ];
 
+//Message bienvenue random
+document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " You're doing ok?";
+robottalk(messageBienvenueRandom + "You're doing ok?");
 
 // TEXT TO SPEECH function
-
 function robottalk (speech){
 var msg = new SpeechSynthesisUtterance();
 var voices = window.speechSynthesis.getVoices();
-msg.voice = voices[6]; 
+msg.voice = voices[2]; 
 msg.voiceURI = 'native';
-msg.volume = 1; // 0 to 1
-msg.rate = 1; // 0.1 to 10
-msg.pitch = 2; //0 to 2
+msg.volume = 1; 
+msg.rate = 1; 
+msg.pitch = 2; 
 msg.text = speech;
 msg.lang = 'en-US';
 speechSynthesis.speak(msg);
 }
-
-
-//Message bienvenue random
-setTimeout(function () {
-    robottalk(messageBienvenueRandom + "You're doing ok?");
-}, 0010);
-document.getElementById("botoutput").innerHTML = messageBienvenueRandom + " You're doing ok?";
 
 //Appel fonction principale au clic et Enter
 document.getElementById("submit").addEventListener("click", answerBot);
