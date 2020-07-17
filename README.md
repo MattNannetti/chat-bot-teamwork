@@ -36,4 +36,4 @@ d. *Animation et son.*
 </br> !["The Meanest bot" visuel](assets/images/capturebotvisuelfini.png)
 
 Il ne reste plus qu'à lui parler ! 
-![robot](https://media.giphy.com/media/urvsFBDfR6N32/giphy.gif)
+</br>![robot](https://media.giphy.com/media/urvsFBDfR6N32/giphy.gif)
