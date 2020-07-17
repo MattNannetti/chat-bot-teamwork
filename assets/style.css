@@ -27,6 +27,14 @@ h1 {
     color: black;
 }
 
+a{
+    color:white;
+}
+
+a:hover{
+    color : lightgrey;
+}
+
 .banner {
     max-width: 270px;
     width: 100%;
