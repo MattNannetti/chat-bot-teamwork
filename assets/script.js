@@ -41,7 +41,7 @@ document.getElementById("answer").addEventListener("keydown", ({
 function robottalk (speech){
 var msg = new SpeechSynthesisUtterance();
 var voices = window.speechSynthesis.getVoices();
-msg.voice = voices[6]; 
+msg.voice = voices[1]; 
 msg.voiceURI = 'native';
 msg.volume = 1; 
 msg.rate = 1; 
