@@ -24,6 +24,7 @@ h1 {
     font-family: ka1;
     font-size: 5em;
     margin-bottom: -5px;
+    color: black;
 }
 
 .banner {
@@ -32,7 +33,7 @@ h1 {
     height: auto;
 }
 
-h5{
+h2{
     font-family: poxel;
     font-size: 1em;
 
@@ -69,5 +70,8 @@ footer{
         width: 100%;
         height: auto;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 545788931d26be39410c70119d6144f2437dd84f
 }
