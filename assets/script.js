@@ -38,17 +38,17 @@ document.getElementById("answer").addEventListener("keydown", ({
 });
 
 // TEXT TO SPEECH function
-function robottalk (speech){
-var msg = new SpeechSynthesisUtterance();
-var voices = window.speechSynthesis.getVoices();
-msg.voice = voices[1]; 
-msg.voiceURI = 'native';
-msg.volume = 1; 
-msg.rate = 1; 
-msg.pitch = 2; 
-msg.text = speech;
-msg.lang = 'en-US';
-speechSynthesis.speak(msg);
+function robottalk(speech) {
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[1];
+    msg.voiceURI = 'native';
+    msg.volume = 1;
+    msg.rate = 1;
+    msg.pitch = 2;
+    msg.text = speech;
+    msg.lang = 'en-US';
+    speechSynthesis.speak(msg);
 }
 
 //Fonction principale : réponses du robot en fonction de l'utilisateur
